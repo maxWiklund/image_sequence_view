@@ -1,0 +1,253 @@
+# Resource object code (Python 3)
+# Created by: object code
+# Created by: The Resource Compiler for Qt version 6.10.1
+# WARNING! All changes made in this file will be lost!
+
+from Qt import QtCore
+
+qt_resource_data = b"\
+\x00\x00\x02\x1d\
+<\
+svg viewBox=\x220 0\
+ 24 24\x22 fill=\x22cu\
+rrentColor\x22 widt\
+h=\x2248\x22 height=\x224\
+8\x22 xmlns=\x22http:/\
+/www.w3.org/2000\
+/svg\x22>\x0a  <rect x\
+=\x222\x22 y=\x220.5\x22 wid\
+th=\x223\x22 height=\x222\
+3\x22 rx=\x221.5\x22 fill\
+=\x22#9e9e9e\x22 strok\
+e=\x22black\x22 stroke\
+-width=\x220.5\x22/>\x0a\x0a\
+    <g transform\
+=\x22scale(1.4 1.4)\
+ translate(-0.5 \
+-3.5)\x22>\x0a    <g t\
+ransform=\x22transl\
+ate(-6.5 0)\x22>\x0a\x0a<\
+!--  <polygon po\
+ints=\x224,4 15,12 \
+4,20\x22 fill=\x22#9e9\
+e9e\x22 stroke=\x22bla\
+ck\x22 stroke-width\
+=\x220.5\x22 transform\
+=\x22translate(5 0)\
+\x22/>-->\x0a  <polygo\
+n points=\x2212,4 2\
+3,12 12,20\x22 fill\
+=\x22#9e9e9e\x22 strok\
+e=\x22black\x22 stroke\
+-width=\x220.5\x22/>\x0a \
+       </g>\x0a    \
+</g>\x0a</svg>\x0a\
+\x00\x00\x01d\
+<\
+svg viewBox=\x220 0\
+ 24 24\x22 fill=\x22cu\
+rrentColor\x22 widt\
+h=\x2248\x22 height=\x224\
+8\x22 xmlns=\x22http:/\
+/www.w3.org/2000\
+/svg\x22>\x0a  <g tran\
+sform=\x22scale(1.3\
+ 1.3) translate(\
+-3 -3)\x22>\x0a  <poly\
+gon points=\x2218,4\
+ 10,12 18,20\x22 fi\
+ll=\x22#9e9e9e\x22 str\
+oke=\x22black\x22 stro\
+ke-width=\x220.5\x22/>\
+\x0a  <rect x=\x226\x22 y\
+=\x224\x22 width=\x222\x22 h\
+eight=\x2216\x22 rx=\x221\
+\x22 fill=\x22#9e9e9e\x22\
+ stroke=\x22black\x22 \
+stroke-width=\x220.\
+5\x22/>\x0a  </g>\x0a</sv\
+g>\x0a\
+\x00\x00\x01\x14\
+<\
+svg viewBox=\x220 0\
+ 24 24\x22 fill=\x22cu\
+rrentColor\x22 widt\
+h=\x2248\x22 height=\x224\
+8\x22 xmlns=\x22http:/\
+/www.w3.org/2000\
+/svg\x22>\x0a    <g tr\
+ansform=\x22rotate(\
+180 12 12) scale\
+(1.3 1.3) transl\
+ate(-3 -3)\x22>\x0a  <\
+polygon points=\x22\
+6,4 20,12 6,20\x22 \
+fill=\x22#9e9e9e\x22 s\
+troke=\x22black\x22 st\
+roke-width=\x220.5\x22\
+/>\x0a    </g>\x0a</sv\
+g>\x0a\
+\x00\x00\x00\xf1\
+<\
+svg viewBox=\x220 0\
+ 24 24\x22 fill=\x22cu\
+rrentColor\x22 widt\
+h=\x2248\x22 height=\x224\
+8\x22 xmlns=\x22http:/\
+/www.w3.org/2000\
+/svg\x22>\x0a  <polygo\
+n points=\x226,4 20\
+,12 6,20\x22 fill=\x22\
+#9e9e9e\x22 transfo\
+rm=\x22scale(1.3 1.\
+3) translate(-3 \
+-3)\x22 stroke=\x22bla\
+ck\x22 stroke-width\
+=\x220.5\x22/>\x0a</svg>\x0a\
+\
+\x00\x00\x01e\
+<\
+svg viewBox=\x220 0\
+ 24 24\x22 fill=\x22cu\
+rrentColor\x22 widt\
+h=\x2248\x22 height=\x224\
+8\x22 xmlns=\x22http:/\
+/www.w3.org/2000\
+/svg\x22>\x0a  <g tran\
+sform=\x22scale(1.3\
+ 1.3) translate(\
+-3 -3)\x22>\x0a  <poly\
+gon points=\x226,4 \
+14,12 6,20\x22 fill\
+=\x22#9e9e9e\x22 strok\
+e=\x22black\x22 stroke\
+-width=\x220.5\x22/>\x0a \
+ <rect x=\x2216\x22 y=\
+\x224\x22 width=\x222\x22 he\
+ight=\x2216\x22 ry=\x221\x22\
+ fill=\x22#9e9e9e\x22 \
+stroke=\x22black\x22 s\
+troke-width=\x220.5\
+\x22/>\x0a    </g>\x0a</s\
+vg>\x0a\
+\x00\x00\x022\
+<\
+svg viewBox=\x220 0\
+ 24 24\x22 fill=\x22cu\
+rrentColor\x22 widt\
+h=\x2248\x22 height=\x224\
+8\x22 xmlns=\x22http:/\
+/www.w3.org/2000\
+/svg\x22>\x0a      <re\
+ct x=\x2219\x22 y=\x220.5\
+\x22 width=\x223\x22 heig\
+ht=\x2223\x22 rx=\x221.5\x22\
+ fill=\x22#9e9e9e\x22 \
+stroke=\x22black\x22 s\
+troke-width=\x220.5\
+\x22/>\x0a\x0a    <g tran\
+sform=\x22scale(1.4\
+ 1.4) translate(\
+-0.5 -3.5)\x22>\x0a   \
+ <g transform=\x22r\
+otate(180 12 12)\
+ translate(-1 0)\
+\x22>\x0a<!--  <polygo\
+n points=\x224,4 15\
+,12 4,20\x22 fill=\x22\
+#9e9e9e\x22 stroke=\
+\x22black\x22 stroke-w\
+idth=\x220.5\x22 trans\
+form=\x22translate(\
+5 0)\x22/>-->\x0a  <po\
+lygon points=\x2212\
+,4 23,12 12,20\x22 \
+fill=\x22#9e9e9e\x22 s\
+troke=\x22black\x22 st\
+roke-width=\x220.5\x22\
+/>\x0a\x0a        </g>\
+\x0a    </g>\x0a</svg>\
+\x0a\
+\x00\x00\x00\xdb\
+<\
+svg viewBox=\x220 0\
+ 24 24\x22 fill=\x22cu\
+rrentColor\x22 widt\
+h=\x2248\x22 height=\x224\
+8\x22 xmlns=\x22http:/\
+/www.w3.org/2000\
+/svg\x22>\x0a  <rect x\
+=\x222\x22 y=\x222\x22 width\
+=\x2220\x22 height=\x2220\
+\x22 rx=\x222\x22 ry=\x222\x22 \
+fill=\x22#9e9e9e\x22 s\
+troke=\x22black\x22 st\
+roke-width=\x220.5\x22\
+/>\x0a</svg>\x0a\
+"
+
+qt_resource_name = b"\
+\x00\x0f\
+\x00\x1cNg\
+\x00j\
+\x00u\x00m\x00p\x00F\x00o\x00r\x00w\x00a\x00r\x00d\x00.\x00s\x00v\x00g\
+\x00\x0c\
+\x087\xc0\xc7\
+\x00p\
+\x00r\x00e\x00v\x00i\x00o\x00u\x00s\x00.\x00s\x00v\x00g\
+\x00\x11\
+\x09\x86\xa2\xa7\
+\x00p\
+\x00l\x00a\x00y\x00B\x00a\x00c\x00k\x00w\x00a\x00r\x00d\x00s\x00.\x00s\x00v\x00g\
+\
+\x00\x0f\
+\x09<U\xc7\
+\x00p\
+\x00l\x00a\x00y\x00F\x00o\x00r\x00w\x00a\x00r\x00d\x00.\x00s\x00v\x00g\
+\x00\x08\
+\x0c\xf7TG\
+\x00n\
+\x00e\x00x\x00t\x00.\x00s\x00v\x00g\
+\x00\x10\
+\x01\x94\xeeg\
+\x00j\
+\x00u\x00m\x00p\x00B\x00a\x00c\x00k\x00w\x00a\x00r\x00d\x00.\x00s\x00v\x00g\
+\x00\x08\
+\x0bcU\x87\
+\x00s\
+\x00t\x00o\x00p\x00.\x00s\x00v\x00g\
+"
+
+qt_resource_struct = b"\
+\x00\x00\x00\x00\x00\x02\x00\x00\x00\x07\x00\x00\x00\x01\
+\x00\x00\x00\x00\x00\x00\x00\x00\
+\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
+\x00\x00\x01\x9by\xc3jc\
+\x00\x00\x00\xa4\x00\x00\x00\x00\x00\x01\x00\x00\x06\xff\
+\x00\x00\x01\x9by\xc3jZ\
+\x00\x00\x00$\x00\x00\x00\x00\x00\x01\x00\x00\x02!\
+\x00\x00\x01\x9by\xc3j`\
+\x00\x00\x00j\x00\x00\x00\x00\x00\x01\x00\x00\x04\xa1\
+\x00\x00\x01\x9by\xc3jb\
+\x00\x00\x00B\x00\x00\x00\x00\x00\x01\x00\x00\x03\x89\
+\x00\x00\x01\x9by\xc3j_\
+\x00\x00\x00\xca\x00\x00\x00\x00\x00\x01\x00\x00\x095\
+\x00\x00\x01\x9by\xc3j`\
+\x00\x00\x00\x8e\x00\x00\x00\x00\x00\x01\x00\x00\x05\x96\
+\x00\x00\x01\x9by\xc3ja\
+"
+
+
+def qInitResources():
+    QtCore.qRegisterResourceData(
+        0x03, qt_resource_struct, qt_resource_name, qt_resource_data
+    )
+
+
+def qCleanupResources():
+    QtCore.qUnregisterResourceData(
+        0x03, qt_resource_struct, qt_resource_name, qt_resource_data
+    )
+
+
+qInitResources()

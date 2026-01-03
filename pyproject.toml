@@ -1,0 +1,44 @@
+[project]
+name = "image-sequence-view"
+version = "0.1.0"
+description = " Image Sequence Viewer in python (Qt) "
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "image-sequence>=1.0.0",
+    "opencolorio>=2.5.0",
+    "openimageio>=3.1.8.0",
+    "pyopengl>=3.1.10",
+    "pyside6>=6.10.1",
+    "qt-py>=1.4.8",
+]
+
+[project.urls]
+Homepage = "https://github.com/maxWiklund/image_sequence_view"
+Repository = "https://github.com/maxWiklund/image_sequence_view.git"
+"Bug Tracker" = "https://github.com/maxWiklund/image_sequence_view/issues"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.build]
+include = [
+    "src/image_sequence_view/**/*.py",
+    "src/image_sequence_view/**/*.pyi",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/image_sequence_view"]
+only-include = ["src/image_sequence_view"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src" = ""
+
+[tool.ruff]
+line-length = 88
+
+[tool.isort]
+line_length = 88
