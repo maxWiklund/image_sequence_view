@@ -27,13 +27,12 @@ FPS_RATES = (
     "12",
 )
 
-
 _IS_DEBUG = os.getenv("IMAGE_SEQUENCE_VIEW_DEBUG", "0") == "1"
-
+_LEVEL = logging.DEBUG if _IS_DEBUG else logging.INFO
 logging.basicConfig(
-    level=logging.DEBUG if _IS_DEBUG else logging.INFO,
     format="[%(asctime)s][%(name)s][%(levelname)s] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 
 LOG = logging.getLogger("image_sequence_view")
+LOG.setLevel(_LEVEL)

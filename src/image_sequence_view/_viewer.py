@@ -17,7 +17,7 @@ import difflib
 import os
 import sys
 from enum import Enum, auto
-from typing import Callable, Optional
+from typing import Callable, Optional, List
 
 import numpy as np
 import OpenImageIO as oiio
@@ -52,6 +52,11 @@ def get_channel_suffix(channel_name: str) -> str:
 
 
 config = ocio.GetCurrentConfig()
+
+if not config.hasRole(ocio.ROLE_SCENE_LINEAR):
+    config.setRole(ocio.ROLE_SCENE_LINEAR, "raw")
+if not config.hasRole(ocio.ROLE_DEFAULT):
+    config.setRole(ocio.ROLE_DEFAULT, "raw")
 
 
 DEFAULT_CHANNEL_NAME = "rgba"
@@ -95,6 +100,9 @@ void main() {{
 
 
 def guess_colorspace(file_path: str) -> str:
+    if not config.getColorSpace("Utility - Linear - Rec.709"):
+        return "raw"
+
     buf = oiio.ImageBuf(file_path)
     target = buf.spec().get_string_attribute("oiio:ColorSpace")
     if target:
@@ -574,24 +582,46 @@ class GLImagePlane(QOpenGLWidget):
 
         """
         self._channel_cache = {}
-        self.rangeChanged.emit(int(float(str(seq.start()))), int(float(str(seq.end()))))
-
         self._current_index = 0
-
-        # List of image file paths that will be displayed while playing the sequence.
-        self._file_paths_to_load = seq.get_paths()
-
+        self._start_frame = int(float(str(seq.start())))
+        self._end_frame = int(float(str(seq.end())))
         # Reset caches.
         self._cached_channels = {}
 
-        self._start_frame = int(float(str(seq.start())))
-        self._end_frame = int(float(str(seq.end())))
+        # List of image file paths that will be displayed while playing the sequence.
+        self._file_paths_to_load = seq.get_paths()
+        self.rangeChanged.emit(self._start_frame, self._end_frame)
 
         self.load_image_from_disk(self._file_paths_to_load[self._current_index], True)
         # Update OCIO
         self.update_ocio_processor()
         self.setup_frame_for_rendering()
         self.reset_zoom_and_pan()
+
+    def set_paths(self, file_paths: List[str]) -> None:
+        """Set file paths to play in viewer.
+
+        Args:
+            file_paths: File paths to play.
+
+        """
+        self._channel_cache = {}
+        self._current_index = 0
+        self._start_frame = 1
+        self._end_frame = len(file_paths)
+        # Reset caches.
+        self._cached_channels = {}
+
+        # List of image file paths that will be displayed while playing the sequence.
+        self._file_paths_to_load = file_paths
+        self.rangeChanged.emit(self._start_frame, self._end_frame)
+
+        self.load_image_from_disk(self._file_paths_to_load[self._current_index], True)
+        # Update OCIO
+        self.update_ocio_processor()
+        self.setup_frame_for_rendering()
+        self.reset_zoom_and_pan()
+
 
     def set_view_channel(self, text: str) -> None:
         """Set channel to view in player e.g rgba or specular...
@@ -817,11 +847,11 @@ class GLImagePlane(QOpenGLWidget):
 
     def paintGL(self):
         """Render image."""
-        try:
-            GL.glClear(GL.GL_COLOR_BUFFER_BIT)
-            if not self.gl_initialized or not self.shader_program:
-                return
+        GL.glClear(GL.GL_COLOR_BUFFER_BIT)
+        if not self.gl_initialized or not self.shader_program:
+            return
 
+        try:
             GL.glUseProgram(self.shader_program)
 
             # Calculate MVP matrix
@@ -1092,6 +1122,7 @@ class ImageSequenceView(QtWidgets.QWidget):
         self.channel_combo.activated.connect(self._channel_changed_callback)
 
         self.set_image_sequence = self.viewport.set_image_sequence
+        self.set_paths = self.viewport.set_paths
         self.set_frame = self.viewport.set_frame
         self.toggle_forward = self.viewport.toggle_forward
         self.toggle_backward = self.viewport.toggle_backward

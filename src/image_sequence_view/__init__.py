@@ -43,6 +43,7 @@ class ImageSequenceWidget(QtWidgets.QWidget):
         self._time_line_view = TimelineViewer(fps=fps, parent=self)
 
         self.set_image_sequence = self._viewport.set_image_sequence
+        self.set_paths = self._viewport.set_paths
         self.set_view_colorspace = self._viewport.set_view_colorspace
 
         # Layout:
@@ -132,10 +133,7 @@ def __test() -> None:
 
         return dark_palette
 
-    src = os.path.join(os.path.dirname(__file__), "../../images/plate.1001.exr")
-    seq = ImageSequence(src)
-    seq.find_frames_on_disk()
-
+    paths = [os.path.realpath(path) for path in sys.argv[1:]]
     # Configure OpenGL
     fmt = QSurfaceFormat()
     fmt.setVersion(4, 1)  # Request OpenGL 4.1
@@ -148,7 +146,13 @@ def __test() -> None:
     window = ImageSequenceWidget()
     window.resize(1200, 1000)
     window.show()
-    window.set_image_sequence(seq)
+    if paths:
+        window.set_paths(paths)
+    else:
+        src = os.path.join(os.path.dirname(__file__), "../../images/plate.1001.exr")
+        seq = ImageSequence(src)
+        seq.find_frames_on_disk()
+        window.set_image_sequence(seq)
     window.set_view_colorspace("Rec.709")
     sys.exit(app.exec_())
 
